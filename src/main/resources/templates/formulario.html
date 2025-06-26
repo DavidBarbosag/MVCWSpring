@@ -8,11 +8,37 @@
 
 <h2>Formulario de Contacto</h2>
 
-<form action="/greeting" method="POST">
+<form id="formulario">
     <label for="nombre">Nombre:</label><br>
     <input type="text" id="nombre" name="nombre" required><br><br>
     <input type="submit" value="Enviar">
 </form>
+
+<div id="respuesta"></div>
+
+<script>
+    document.getElementById('formulario').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById('nombre').value;
+
+        fetch('/formulario', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `nombre=${encodeURIComponent(nombre)}`
+        })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('respuesta').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('respuesta').innerText = 'Error al enviar el formulario.';
+            });
+    });
+</script>
 
 </body>
 </html>
