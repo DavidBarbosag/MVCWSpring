@@ -35,3 +35,31 @@ The name parameter value overrides the default value of World and is reflected i
 
 ![home](https://github.com/user-attachments/assets/200b3031-4772-42ae-816c-9cf7962de1a0)
 
+## Ejercicios
+
+1. Cree un formulario en html para hacer la petición "localhost:8080/hello?
+name=Catalina" Por un método POST. Al oprimir el botón de enviar del
+formulario siempre se debe cargar una página nueva. Modifique o
+agregue métodos al controlador según sea necesario.
+
+**formulario.html**
+
+![{F40523AA-25E6-4ACD-8750-8414654377B4}](https://github.com/user-attachments/assets/99400dd6-0249-4068-bddc-5c1201ec8c79)
+
+**FormularioController**
+
+![{1D04F3E1-0ABE-4324-AA2D-00EB06B15670}](https://github.com/user-attachments/assets/ee9c807b-979b-4d4e-845f-2c53f1edae89)
+
+2. Modifique el formulario para que no cargue una página nueva. Ahora
+cada vez que se oprima debe actualizar la página, pero no debe
+recargarla nuevamente, es decir use Java script.
+
+![{A158DFB4-3183-4E3B-A435-60B1373CFB6A}](https://github.com/user-attachments/assets/19c110f6-357f-4ac2-b820-8160aac3456b)
+
+Resultado de ejecución:
+
+![{1F928173-0D86-44F1-A632-8856543D16C9}](https://github.com/user-attachments/assets/6eeacf50-dcd1-41e5-aa96-258d039ea5c0)
+
+
+
+
